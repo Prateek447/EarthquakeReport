@@ -4,7 +4,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public final class QueryUtils {
 
@@ -36,7 +39,7 @@ public final class QueryUtils {
                   JSONObject  object = features.getJSONObject(i).getJSONObject("properties");
                   String magnitude  = object.getString("mag");
                   String location = object.getString("place");
-                  String time = object.getString("time");
+                   Long time = object.getLong("time");
                   earthquakes.add(new Earthquake(magnitude,location,time));
               }
 

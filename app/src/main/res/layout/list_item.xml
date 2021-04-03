@@ -4,35 +4,49 @@
     android:layout_height="wrap_content"
     xmlns:tool="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
-    android:weightSum="100"
     android:gravity="center"
     xmlns:tools="http://schemas.android.com/tools"
     android:padding="16dp">
 
     <TextView
         android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="wrap_content"
-        android:layout_weight="25"
         android:id="@+id/first_text"
         tools:text="first"
         />
 
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="50"
-        android:id="@+id/second_text"
-        tools:text="second"
-        />
-
 
     <TextView
+        android:id="@+id/location_offset"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="25"
-        android:id="@+id/third_text"
-        tools:text="third"
+        android:layout_weight="1"
+        tools:text="second" />
+
+    <TextView
+        android:id="@+id/primary_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        tools:text="second" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:id="@+id/date"
+        tools:text="jan 6 2017"
         />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:id="@+id/time"
+        tools:text="2:45 AM"
+        />
+
 
 
 
