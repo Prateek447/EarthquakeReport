@@ -21,16 +21,17 @@ public class MainActivity extends AppCompatActivity {
 
         listView  = findViewById(R.id.list);
 
-        ArrayList<String> earthquakes = new ArrayList<>();
-        earthquakes.add("San Francisco");
-        earthquakes.add("London");
-        earthquakes.add("Tokyo");
-        earthquakes.add("Mexico City");
-        earthquakes.add("Moscow");
-        earthquakes.add("Rio de Janeiro");
-        earthquakes.add("Paris");
+        ArrayList<Earthquake> earthquakes = new ArrayList<Earthquake>();
+        earthquakes.add(new Earthquake("1.1","San Fransico", "4 Feb 20021"));
+        earthquakes.add(new Earthquake("1.1","San Fransico", "4 Feb 20021"));
+        earthquakes.add(new Earthquake("2.3","San Fransico", "4 Feb 20021"));
+        earthquakes.add(new Earthquake("5.2","San Fransico", "4 Feb 20021"));
+        earthquakes.add(new Earthquake("3.1","San Fransico", "4 Feb 20021"));
+        earthquakes.add(new Earthquake("2.1","San Fransico", "4 Feb 20021"));
+        earthquakes.add(new Earthquake("4.1","San Fransico", "4 Feb 20021"));
 
-        ArrayAdapter<String>  adapter  = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,earthquakes);
+
+        QuakeAdapter adapter  = new QuakeAdapter(this,earthquakes);
 
         listView.setAdapter(adapter);
 
