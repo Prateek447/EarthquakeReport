@@ -21,14 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
         listView  = findViewById(R.id.list);
 
-        ArrayList<Earthquake> earthquakes = new ArrayList<Earthquake>();
-        earthquakes.add(new Earthquake("1.1","San Fransico", "4 Feb 20021"));
-        earthquakes.add(new Earthquake("1.1","San Fransico", "4 Feb 20021"));
-        earthquakes.add(new Earthquake("2.3","San Fransico", "4 Feb 20021"));
-        earthquakes.add(new Earthquake("5.2","San Fransico", "4 Feb 20021"));
-        earthquakes.add(new Earthquake("3.1","San Fransico", "4 Feb 20021"));
-        earthquakes.add(new Earthquake("2.1","San Fransico", "4 Feb 20021"));
-        earthquakes.add(new Earthquake("4.1","San Fransico", "4 Feb 20021"));
+        ArrayList<Earthquake> earthquakes = QueryUtils.extractEarthQuakes();
+
 
 
         QuakeAdapter adapter  = new QuakeAdapter(this,earthquakes);
