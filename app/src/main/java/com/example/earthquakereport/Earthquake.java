@@ -2,21 +2,35 @@ package com.example.earthquakereport;
 
 public class Earthquake {
 
-    private  String mag;
+    private double mag;
     private String place;
     private  Long date;
+    private String url;
 
-    public Earthquake(String mag, String place, Long date) {
+    public Earthquake(double mag, String place, Long date, String url) {
         this.mag=mag;
           this.place=place;
           this.date=date;
+          this.url=url;
     }
 
-    public String getMag() {
+    public Long getDate() {
+        return date;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public double getMag() {
         return mag;
     }
 
-    public void setMag(String mag) {
+    public void setMag(double mag) {
         this.mag = mag;
     }
 
